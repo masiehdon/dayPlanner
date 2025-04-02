@@ -1,5 +1,5 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import Layout from '../components/Layout'
+import Layout from '../components/tasks/TaskLayout'
 
 import React from 'react'
 

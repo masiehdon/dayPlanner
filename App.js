@@ -1,9 +1,9 @@
 
 import { StyleSheet, Text, View, SafeAreaView, Platform, StatusBar } from 'react-native';
-import AddTask from './src/components/tasks/AddTask';
-import Layout from './src/components/Layout';
-import TaskList from './src/components/tasks/TaskList';
-import { useTaskStore } from './src/store/useTaskStore'; // Import Zustand store
+import AddTask from './app/components/tasks/AddTask';
+import TaskLayout from './app/components/TaskLayout';
+import TaskList from './app/components/tasks/TaskList';
+import { useTaskStore } from './app/store/useTaskStore'; // Import Zustand store
 
 export default function App() {
   const tasks = useTaskStore((state) => state.tasks); // Get tasks from store
@@ -14,11 +14,11 @@ export default function App() {
         <View style={{ height: StatusBar.currentHeight }} />
       )}
       <SafeAreaView style={styles.safeArea}>
-        <Layout>
+        <TaskLayout>
         <TaskList tasks={tasks} />  {/* Pass tasks as prop */}
        <AddTask />
    
-        </Layout>
+        </TaskLayout>
       </SafeAreaView>
     </View>
   );

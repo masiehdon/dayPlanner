@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, ImageBackground, StyleSheet, SafeAreaView } from "react-native";
 
-const Layout = ({ children }) => {
+const TaskLayout = ({ children }) => {
   return (
    
     <ImageBackground
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Layout;
+export default TaskLayout;
